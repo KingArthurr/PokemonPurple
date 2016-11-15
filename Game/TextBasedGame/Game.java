@@ -213,7 +213,7 @@ public class Game implements Serializable {
 	
 	public static void saveGame() {
 		try {
-			FileOutputStream saveFile= new FileOutputStream("Save.sav");
+			FileOutputStream saveFile= new FileOutputStream("Game/TextBasedGame/Save.sav");
 			ObjectOutputStream save = new ObjectOutputStream(saveFile);
 			save.writeObject(player);
 			save.writeObject(playershouse);
@@ -244,7 +244,7 @@ public class Game implements Serializable {
 	
 	public static void loadGame() {
 		try {
-			FileInputStream saveFile = new FileInputStream("Save.sav");
+			FileInputStream saveFile = new FileInputStream("Game/TextBasedGame/Save.sav");
 			ObjectInputStream save = new ObjectInputStream(saveFile);
 			player = (Player) save.readObject();
 			playershouse = (Location) save.readObject();

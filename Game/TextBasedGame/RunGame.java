@@ -1,4 +1,3 @@
-
 package TextBasedGame;
 
 public class RunGame {
